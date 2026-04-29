@@ -49,6 +49,15 @@ def install_trufflehog():
         "| sh -s -- -b /usr/local/bin"
     )
 
+def install_bearer():
+    if shutil.which("bearer"):
+        print("[*] Bearer already installed.")
+        return
+
+    run(
+        "curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh "
+        "| sh -s -- -b /usr/local/bin"
+    )
 
 def install_gitleaks():
     if shutil.which("gitleaks"):
@@ -131,6 +140,7 @@ def verify():
     for cmd in [
         "codeql version",
         "trufflehog --version",
+        "bearer --version",
         "semgrep --version",
         "gitleaks version",
         "code --version",
@@ -143,6 +153,7 @@ def main():
     install_base_packages()
     install_semgrep()
     install_trufflehog()
+    install_bearer()
     install_gitleaks()
     install_codeql()
     install_vscode()
