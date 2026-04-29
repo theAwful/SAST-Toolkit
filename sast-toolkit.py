@@ -60,8 +60,7 @@ def install_trufflehog():
         print("[*] TruffleHog already installed.")
         return
     run(
-        "curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh "
-        "| sh -s -- -b /usr/local/bin"
+        "curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin"
     )
 
 
@@ -70,8 +69,7 @@ def install_bearer():
         print("[*] Bearer already installed.")
         return
     run(
-        "curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh "
-        "| sh -s -- -b /usr/local/bin"
+        "curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh -s -- -b /usr/local/bin"
     )
 
 
