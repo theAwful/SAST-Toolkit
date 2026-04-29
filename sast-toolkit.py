@@ -55,8 +55,7 @@ def install_bearer():
         return
 
     run(
-        "curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh "
-        "| sh -s -- -b /usr/local/bin"
+        "curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh "
     )
 
 def install_gitleaks():
