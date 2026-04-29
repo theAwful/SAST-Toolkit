@@ -45,8 +45,7 @@ def install_trufflehog():
         return
 
     run(
-        "curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh "
-        "| sh -s -- -b /usr/local/bin"
+        "curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sh -s -- -b /usr/local/bin"
     )
 
 def install_bearer():
@@ -55,7 +54,7 @@ def install_bearer():
         return
 
     run(
-        "curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh "
+        "curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh -s -- -b /usr/local/bin"
     )
 
 def install_gitleaks():
